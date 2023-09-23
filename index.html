@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- You should have a page title in an h1 element with an id of title -->
-    <h1 id="title" class="title">Learning Forms</h1>
-<!-- You should have a short explanation in a p element with an id of description -->
-    <p id="description" class="description">Here is an example of form styling and accessibility</p>
-<!-- You should have a form element with an id of survey-form -->
-    <form id="survey-form" class="survey-form">
-<!-- Inside the form element, you are required to enter your name in an input field th- has an id of name and a type of text -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- You should have a page title in an h1 element with an id of title -->
+		<h1 id="title" class="title">Learning Forms</h1>
+		<!-- You should have a short explanation in a p element with an id of description -->
+		<p id="description" class="description">Here is an example of form styling and accessibility</p>
+		<!-- You should have a form element with an id of survey-form -->
+		<form id="survey-form" class="survey-form">
+			<!-- For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: name-label", id="email-label", and id="number-label" -->
 
-<!-- Inside the form element, you are required to enter your email in an input fie- that has an id of email -->
+			<!-- Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text -->
 
-<!-- If you enter an email that is not formatted correctly, you will see an HTM- validation error -->
+			<!-- For the name, email, and number input fields, you can see placeholder text th- gives a description or instructions for each field -->
 
-<!-- Inside the form, you can enter a number in an input field that has an id of number -->
+			<label for="name" id="name-label">Name</label>
+			<input type="text" name="name" id="name" placeholder="Enter Your Name" required />
 
-<!-- The number input should not accept non-numbers, either by preventing you fr- typing them or by showing an HTML5 validation error (depending on your browser). -->
+			<!-- Inside the form element, you are required to enter your email in an input field that has an id of email -->
 
-<!-- If you enter numbers outside the range of the number input, which are defined - the min and max attributes, you will see an HTML5 validation error -->
+			<!-- VALIDATION RULE: If you enter an email that is not formatted correctly, you will see an HTML validation error -->
 
-<!-- For the name, email, and number input fields, you can see corresponding lab- elements in the form, that describe the purpose of each field with the followi- ids: name-label", id="email-label", and id="number-label" -->
+			<label for="email" id="email-label">Email</label>
+			<input type="email" name="email" id="email" placeholder="Enter Your Email" required />
 
-<!-- For the name, email, and number input fields, you can see placeholder text th- gives a description or instructions for each field -->
+			<!-- Inside the form, you can enter a number in an input field that has an id of number -->
 
-<!-- Inside the form element, you should have a select dropdown element with an id - dropdown and at least two options to choose from -->
+			<!-- VALIDATION RULE: The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser). -->
 
-<!-- Inside the form element, you can select an option from a group of at least t- radio buttons that are grouped using the name attribute -->
+			<!-- VALIDATION RULE: If you enter numbers outside the range of the number input, which are defined - the min and max attributes, you will see an HTML5 validation error -->
+			<label for="number" id="number-label">Enter a Number Between 1-10</label>
+			<input type="number" name="number" id="number" placeholder="Between 1-10" />
 
-<!-- Inside the form element, you can select several fields from a series of checkboxe- each of which must have a value attribute -->
+			<!-- Inside the form element, you should have a select dropdown element with an id - dropdown and at least two options to choose from -->
+			<label for="dropdown" id="dropdown-label"></label>
 
-<!-- Inside the form element, you are presented with a textarea for additional comments -->
+			<!-- Emmet code to make this quickly =  select>option*10[value="Option $"]{Option $}-->
 
-<!-- Inside the form element, you are presented with a button with id of submit - submit all the inputs -->
-</body>
+			<select name="" id="">
+				<option value="Option 1">Option 1</option>
+				<option value="Option 2">Option 2</option>
+				<option value="Option 3">Option 3</option>
+				<option value="Option 4">Option 4</option>
+				<option value="Option 5">Option 5</option>
+				<option value="Option 6">Option 6</option>
+				<option value="Option 7">Option 7</option>
+				<option value="Option 8">Option 8</option>
+				<option value="Option 9">Option 9</option>
+				<option value="Option 10">Option 10</option>
+			</select>
+
+			<!-- Inside the form element, you can select an option from a group of at least three radio buttons that are grouped using the name attribute -->
+			<input type="radio" name="radioButtons" id="radio 1" value="radio button 1" />
+			<label for="radioButtons 1" id="radioChoice1" name="radioButtons">Button 1</label
+			><input type="radio" name="radioButtons" id="radio 2" value="radio button 2" />
+			<label for="radioButtons 2" id="radioChoice2" name="radioButtons">Button 2</label
+			><input type="radio" name="radioButtons" id="radio 3" value="radio button 3" />
+			<label for="radioButtons 3" id="radioChoice3" name="radioButtons">Button 3</label
+			><input type="radio" name="radioButtons" id="radio 4" value="radio button 4" />
+			<label for="radioButtons 4" id="radioChoice4" name="radioButtons">Button 4</label>
+
+			<!-- Inside the form element, you can select several fields from a series of checkboxe- each of which must have a value attribute -->
+			<input type="checkbox" name="checkboxes" id="checkbox 1" /><label for="checkboxes">checkbox 1</label
+			><input type="checkbox" name="checkboxes" id="checkbox 2" /><label for="checkboxes">checkbox 2</label
+			><input type="checkbox" name="checkboxes" id="checkbox 3" /><label for="checkboxes">checkbox 3</label
+			><input type="checkbox" name="checkboxes" id="checkbox 4" /><label for="checkboxes">checkbox 4</label>
+
+			<!-- Inside the form element, you are presented with a textarea for additional comments -->
+			<label for="textAreaInput">Long Response</label>
+			<textarea id="textAreaInput" name="textAreaBox" rows="20" cols="50">Enter your multi-sentence reply in this box.</textarea>
+			<!-- Inside the form element, you are presented with a button with id of submit - submit all the inputs -->
+			<button type="submit" id="submit" class="submit-button">Submit</button>
+		</form>
+	</body>
 </html>
