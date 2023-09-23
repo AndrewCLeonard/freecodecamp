@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>survey form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+				<p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+			</header>
+			<form id="survey-form">
+				<div class="form-group">
+					<label for="name" id="name-label">Name</label>
+					<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+				</div>
+				<!-- have to fix email validation -->
+				<div class="form-group">
+					<label for="email" id="email-label">Email</label>
+					<input type="email" name="email" id="email" placeholder="Enter your email"
+					pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"/>
+				</div>
+				<div class="form-group">
+					<label for="number" id="number-label" placeholder="Enter a Number">Number</label>
+					<input type="number" id="number" min="1" max="10" />
+				</div>
+				<div class="form-group">
+					<label for="dropdown" id="dropdown-label" placeholder="Choose One">Choose an option</label>
+					<select name="dropdown" id="dropdown">
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="text-area" id="text-area-label" placeholder="Text area space">Text Area Box</label>
+					<textarea name="text-box" id="text-area" class="input-textarea" cols="30" rows="10"></textarea>
+				</div>
+				<button type="submit" class="submit-button" id="submit">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
