@@ -25,10 +25,14 @@ _basic HTML with responsive web design principles_
 -   [x] pseudo code
 -   [x] connect CSS file
 -   [x] Basic HTML
--   [x] Responsive Web Design Principles
+-   [x] organize form with semantic HTML, divs, and classes
+-   [] Applied Accessibility
 -   [] Basic CSS
+-   [x] Responsive Web Design Principles
 -   [] Form Validation
 -   [] Applied Visual Design
--   [] Applied Accessibility
 -   [] CSS Flexbox
 -   [] CSS Grid
+
+## questions
+- what are pseudo-elements, and how do they differ from pseudo-classes?
