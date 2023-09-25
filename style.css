@@ -6,8 +6,8 @@
 }
 
 :root {
-	--black-alpha: rgb(100 100 100 /.75);
-
+	--black-alpha: rgb(100 100 100 /0.75);
+}
 
 body {
 	/* background: linear-gradient(#e66465, #9198e5); */
@@ -27,6 +27,50 @@ summary,
 form {
 	background-color: var(--black-alpha);
 	border-radius: 8px;
-	padding: 0.5rem;
+	padding: 2.5rem 1.25rem;
 	width: auto;
+	max-width: 800px;
+}
+fieldset {
+	margin-bottom: 1rem;
+}
+
+.data-entry *:not([type="radio"]) {
+	display: block;
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+	form {
+		min-width: 400px;
+		background-color: red;
+	}
+	.personal-info * {
+		display: block;
+	}
+}
+/* Tablet portrait: 481px to 768px */
+@media only screen and (min-width: 481px) {
+	form {
+		background-color: orange;
+	}
+}
+/* Tablet landscape: 769px to 1024px */
+@media only screen and (min-width: 769px) {
+	form {
+		background-color: yellow;
+	}
+}
+/* Desktop: 1025px to 1200px */
+@media only screen and (min-width: 1025px) {
+	form {
+		background-color: green;
+	}
+}
+/* Large desktop: 1201px and up */
+@media only screen and (min-width: 1201px) {
+	form {
+		background-color: blue;
+		max-width: 800px;
+	}
 }

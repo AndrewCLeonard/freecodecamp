@@ -18,7 +18,7 @@
 			<!-- Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text -->
 
 			<!-- For the name, email, and number input fields, you can see placeholder text th- gives a description or instructions for each field -->
-			<fieldset class="personalInfo">
+			<fieldset class="personal-info">
 				<legend>Personal Info</legend>
 				<label for="name" id="name-label">Name</label>
 				<input type="text" name="name" id="name" placeholder="Enter Your Name" required />
@@ -36,17 +36,17 @@
 			<!-- VALIDATION RULE: The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser). -->
 
 			<!-- VALIDATION RULE: If you enter numbers outside the range of the number input, which are defined - the min and max attributes, you will see an HTML5 validation error -->
-			<fieldset>
+			<fieldset class="data-entry">
 				<legend>Data Entry</legend>
 				<label for="number" id="number-label">Enter a Number Between 1-10</label>
 				<input type="number" name="number" id="number" placeholder="Between 1-10" />
 
 				<!-- Inside the form element, you should have a select dropdown element with an id - dropdown and at least two options to choose from -->
-				<label for="dropdown" id="dropdown-label"></label>
+				<label for="dropdown" id="dropdown-label">Choose an Option</label>
 
 				<!-- Emmet code to make this quickly =  select>option*10[value="Option $"]{Option $}-->
 
-				<select name="" id="">
+				<select name="dropdown" id="dropdown">
 					<option value="Option 1">Option 1</option>
 					<option value="Option 2">Option 2</option>
 					<option value="Option 3">Option 3</option>
@@ -60,14 +60,20 @@
 				</select>
 
 				<!-- Inside the form element, you can select an option from a group of at least three radio buttons that are grouped using the name attribute -->
-				<input type="radio" name="radioButtons" id="radio 1" value="radio button 1" />
-				<label for="radioButtons 1" id="radioChoice1" name="radioButtons">Button 1</label
-				><input type="radio" name="radioButtons" id="radio 2" value="radio button 2" />
-				<label for="radioButtons 2" id="radioChoice2" name="radioButtons">Button 2</label
-				><input type="radio" name="radioButtons" id="radio 3" value="radio button 3" />
-				<label for="radioButtons 3" id="radioChoice3" name="radioButtons">Button 3</label
-				><input type="radio" name="radioButtons" id="radio 4" value="radio button 4" />
-				<label for="radioButtons 4" id="radioChoice4" name="radioButtons">Button 4</label>
+				<label for="radio1" id="radioChoice1" name="radioButtons">
+					Button 1
+					<input type="radio" name="radioButtons" id="radio 1" value="radio button 1" />
+				</label>
+
+				<label for="radio2" id="radioChoice2" name="radioButtons">
+					Button 2
+					<input type="radio" name="radioButtons" id="radio 2" value="radio button 2" />
+				</label>
+
+				<input type="radio" name="radioButtons" id="radio 3" value="radio button 3" />
+				<label for="radio3" id="radioChoice3" name="radioButtons">Button 3</label>
+				<input type="radio" name="radioButtons" id="radio 4" value="radio button 4" />
+				<label for="radio4" id="radioChoice4" name="radioButtons">Button 4</label>
 
 				<!-- Inside the form element, you can select several fields from a series of checkboxe- each of which must have a value attribute -->
 				<input type="checkbox" name="checkboxes" id="checkbox 1" /><label for="checkboxes">checkbox 1</label

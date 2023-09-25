@@ -2,6 +2,24 @@
 
 Doing the freecodecamp challenges
 
+## Project Outline
+
+| Step | Description                                         | Comments                               |
+| ---- | --------------------------------------------------- | -------------------------------------- |
+| 1    | set up repo                                         |                                        |
+|      | pseudo code                                         |                                        |
+|      | connect CSS file                                    |                                        |
+| 2    | Basic HTML                                          |                                        |
+| 3    | responsive web design principles                    | set up `media` queries for breakpoints |
+|      | organize form with semantic HTML, divs, and classes |                                        |
+|      | Applied Accessibility                               |                                        |
+|      | Basic CSS                                           |                                        |
+|      | Responsive Web Design Principles                    |                                        |
+|      | Form Validation                                     |                                        |
+|      | Applied Visual Design                               |                                        |
+|      | CSS Flexbox                                         |                                        |
+|      | CSS Grid                                            |                                        |
+
 ## Branches
 
 ### step_1
@@ -35,4 +53,5 @@ _basic HTML with responsive web design principles_
 -   [] CSS Grid
 
 ## questions
-- what are pseudo-elements, and how do they differ from pseudo-classes?
+
+-   what are pseudo-elements, and how do they differ from pseudo-classes?
