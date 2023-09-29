@@ -24,6 +24,7 @@ summary,
 	cursor: pointer;
 }
 
+/* FORM STYLES */
 form {
 	background-color: var(--black-alpha);
 	border-radius: 8px;
@@ -31,13 +32,44 @@ form {
 	width: auto;
 	max-width: 800px;
 }
+
 fieldset {
 	margin-bottom: 1rem;
+	border: 1px solid black;
 }
 
-.data-entry *:not([type="radio"]) {
-	display: block;
+legend {
+	font-size: larger;
+	font-weight: bold;
 }
+.form-group {
+	margin: 0.75rem 0;
+}
+
+.form-group:last-child {
+	margin-bottom: 0;
+}
+
+.form-group > p {
+	margin: 0;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+	font-size: large;
+}
+.form-group:last-child {
+	padding-bottom: 0;
+}
+
+.radio-group:not(:last-child) {
+	margin: 0 auto 0.5rem auto;
+}
+
+label[for^="checkbox"] {
+	display: block;
+	margin: 0 auto 0.5rem auto;
+}
+
+/* MEDIA QUERIES */
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -50,27 +82,32 @@ fieldset {
 	}
 }
 /* Tablet portrait: 481px to 768px */
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 	form {
 		background-color: orange;
 	}
 }
 /* Tablet landscape: 769px to 1024px */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
 	form {
 		background-color: yellow;
 	}
 }
 /* Desktop: 1025px to 1200px */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
 	form {
 		background-color: green;
 	}
 }
 /* Large desktop: 1201px and up */
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
 	form {
 		background-color: blue;
 		max-width: 800px;
+	}
+	@media screen and (min-width: 1601px) and (max-width: 1920px) {
+		form {
+			background-color: purple;
+		}
 	}
 }

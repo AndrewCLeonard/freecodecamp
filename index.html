@@ -20,15 +20,18 @@
 			<!-- For the name, email, and number input fields, you can see placeholder text th- gives a description or instructions for each field -->
 			<fieldset class="personal-info">
 				<legend>Personal Info</legend>
-				<label for="name" id="name-label">Name</label>
-				<input type="text" name="name" id="name" placeholder="Enter Your Name" required />
+				<div class="form-group">
+					<label for="name" id="name-label">Name</label>
+					<input type="text" name="name" id="name" placeholder="Enter Your Name" required />
+				</div>
 
 				<!-- Inside the form element, you are required to enter your email in an input field that has an id of email -->
 
 				<!-- VALIDATION RULE: If you enter an email that is not formatted correctly, you will see an HTML validation error -->
-
-				<label for="email" id="email-label">Email</label>
-				<input type="email" name="email" id="email" placeholder="Enter Your Email" required />
+				<div class="form-group">
+					<label for="email" id="email-label">Email</label>
+					<input type="email" name="email" id="email" placeholder="Enter Your Email" required />
+				</div>
 			</fieldset>
 
 			<!-- Inside the form, you can enter a number in an input field that has an id of number -->
@@ -38,55 +41,70 @@
 			<!-- VALIDATION RULE: If you enter numbers outside the range of the number input, which are defined - the min and max attributes, you will see an HTML5 validation error -->
 			<fieldset class="data-entry">
 				<legend>Data Entry</legend>
-				<label for="number" id="number-label">Enter a Number Between 1-10</label>
-				<input type="number" name="number" id="number" placeholder="Between 1-10" />
+				<div class="form-group">
+					<label for="number" id="number-label">Enter a Number Between 1-10</label>
+					<input type="number" name="number" id="number" placeholder="Between 1-10" />
+				</div>
 
 				<!-- Inside the form element, you should have a select dropdown element with an id - dropdown and at least two options to choose from -->
-				<label for="dropdown" id="dropdown-label">Choose an Option</label>
+				<div class="form-group">
+					<label for="dropdown" id="dropdown-label">Choose an Option</label>
 
-				<!-- Emmet code to make this quickly =  select>option*10[value="Option $"]{Option $}-->
+					<!-- Emmet code to make this quickly =  select>option*10[value="Option $"]{Option $}-->
 
-				<select name="dropdown" id="dropdown">
-					<option value="Option 1">Option 1</option>
-					<option value="Option 2">Option 2</option>
-					<option value="Option 3">Option 3</option>
-					<option value="Option 4">Option 4</option>
-					<option value="Option 5">Option 5</option>
-					<option value="Option 6">Option 6</option>
-					<option value="Option 7">Option 7</option>
-					<option value="Option 8">Option 8</option>
-					<option value="Option 9">Option 9</option>
-					<option value="Option 10">Option 10</option>
-				</select>
-
-				<!-- Inside the form element, you can select an option from a group of at least three radio buttons that are grouped using the name attribute -->
-				<label for="radio1" id="radioChoice1" name="radioButtons">
-					Button 1
-					<input type="radio" name="radioButtons" id="radio 1" value="radio button 1" />
-				</label>
-
-				<label for="radio2" id="radioChoice2" name="radioButtons">
-					Button 2
-					<input type="radio" name="radioButtons" id="radio 2" value="radio button 2" />
-				</label>
-
-				<input type="radio" name="radioButtons" id="radio 3" value="radio button 3" />
-				<label for="radio3" id="radioChoice3" name="radioButtons">Button 3</label>
-				<input type="radio" name="radioButtons" id="radio 4" value="radio button 4" />
-				<label for="radio4" id="radioChoice4" name="radioButtons">Button 4</label>
-
-				<!-- Inside the form element, you can select several fields from a series of checkboxe- each of which must have a value attribute -->
-				<input type="checkbox" name="checkboxes" id="checkbox 1" /><label for="checkboxes">checkbox 1</label
-				><input type="checkbox" name="checkboxes" id="checkbox 2" /><label for="checkboxes">checkbox 2</label
-				><input type="checkbox" name="checkboxes" id="checkbox 3" /><label for="checkboxes">checkbox 3</label
-				><input type="checkbox" name="checkboxes" id="checkbox 4" /><label for="checkboxes">checkbox 4</label>
+					<select name="dropdown" id="dropdown">
+						<option value="Option 1">Option 1</option>
+						<option value="Option 2">Option 2</option>
+						<option value="Option 3">Option 3</option>
+						<option value="Option 4">Option 4</option>
+						<option value="Option 5">Option 5</option>
+						<option value="Option 6">Option 6</option>
+						<option value="Option 7">Option 7</option>
+						<option value="Option 8">Option 8</option>
+						<option value="Option 9">Option 9</option>
+						<option value="Option 10">Option 10</option>
+					</select>
+				</div>
 			</fieldset>
 
+			<!-- Inside the form element, you can select an option from a group of at least three radio buttons that are grouped using the name attribute -->
+			<fieldset>
+				<legend>Radio & Checkboxes</legend>
+				<div class="form-group">
+					<p>Radio Buttons</p>
+					<div class="radio-group">
+						<label for="radio1">label 1</label>
+						<input type="radio" name="radiobtns" id="radio1" value="radio1" />
+					</div>
+					<div class="radio-group">
+						<label for="radio2">label 2</label>
+						<input type="radio" name="radiobtns" id="radio2" value="radio2" />
+					</div>
+					<div class="radio-group">
+						<label for="radio3">label 3</label>
+						<input type="radio" name="radiobtns" id="radio3" value="radio3" />
+					</div>
+					<div class="radio-group">
+						<label for="radio4">This label has a longer title</label>
+						<input type="radio" name="radiobtns" id="radio4" value="radio4" />
+					</div>
+				</div>
+				<!-- Inside the form element, you can select several fields from a series of checkboxe- each of which must have a value attribute -->
+				<div class="form-group">
+					<p>Here are some checkboxes</p>
+					<div class="checkbox-group">
+						<label for="checkboxes"><input type="checkbox" name="checkboxes" id="checkbox 1" />checkbox 1</label>
+						<label for="checkboxes"><input type="checkbox" name="checkboxes" id="checkbox 2" />checkbox 2</label>
+						<label for="checkboxes"><input type="checkbox" name="checkboxes" id="checkbox 3" />checkbox 3</label>
+						<label for="checkboxes"><input type="checkbox" name="checkboxes" id="checkbox 4" />checkbox 4</label>
+					</div>
+				</div>
+			</fieldset>
 			<!-- Inside the form element, you are presented with a textarea for additional comments -->
 			<fieldset>
 				<legend>Comments</legend>
 				<label for="textAreaInput">Long Response</label>
-				<textarea id="textAreaInput" name="textAreaBox">Enter your multi-sentence reply in this box.</textarea>
+				<textarea id="textAreaInput" name="textAreaBox" placeholder="Enter your multi-sentence reply in this box."></textarea>
 				<!-- Inside the form element, you are presented with a button with id of submit - submit all the inputs -->
 			</fieldset>
 			<button type="submit" id="submit" class="submit-button">Submit</button>

@@ -55,3 +55,40 @@ _basic HTML with responsive web design principles_
 ## questions
 
 -   what are pseudo-elements, and how do they differ from pseudo-classes?
+
+## Notes
+
+### radio buttons
+
+| attribute | description                                                                                                                                                                                               |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name      | groups radio buttons                                                                                                                                                                                      |
+| value     | determines what is sent to the server                                                                                                                                                                     |
+| id        | `input type="radio"` has an `id` that matches its `label` element's `for` attribute to associate the label with the input element                                                                         |
+| for       | associates the label with the input element                                                                                                                                                               |
+| label     | wraps the text for the radio button                                                                                                                                                                       |
+| required  | <ul><li>prevents the form from being submitted without a value for the radio button</li><li>If any radio button in a group has the `required attribute, a radio button in that group must be checked</li> |
+| checked   | <ul><li>used as an attribute on the `input`.</li><li>pre-selects a radio button</li><li>only one radio button in a group can be checked</li></ul>                                                         |
+
+-   radio buttons are grouped by the `name` attribute
+-   `value` attribute is used to determine what is sent to the server
+-   `label` element is used to wrap the text for the radio button
+-   `for` attribute is used to associate the `label` with the `input` element
+-   `id` attribute is used to associate the `label` with the `input` element
+
+### `margin`
+
+```
+/* Apply to all four sides */
+margin: 1em;
+margin: -3px;
+
+/* top and bottom | left and right */
+margin: 5% auto;
+
+/* top | left and right | bottom */
+margin: 1em auto 2em;
+
+/* top | right | bottom | left */
+margin: 2px 1em 0 auto;
+```
